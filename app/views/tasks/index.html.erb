@@ -1,15 +1,15 @@
 <h1> Tasks Manager </h1>
-<%= link_to "New Task", new_task_path %>
+<% link_to "New Task", new_task_path %>
 
 <ul>
- <%= @tasks.each do |task| %>
+ <% @tasks.each do |task| %>
  <li>
    <h2>
      <%= link_to task.name, task_path(task) %>
    </h2>
    <%= link_to "Delete", task_path(task), method: :delete %>
  </li>
- <%= end %>
+ <% end %>
 </ul>
 
 
